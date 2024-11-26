@@ -81,9 +81,9 @@ func (spw *serialPortWrapper) Read(rxbuf []byte) (cnt int, err error) {
 
 	cnt, err = spw.port.Read(rxbuf)
 	// mask serial.ErrTimeout errors from the serial port
-	if err != nil && err == serial.ErrTimeout {
-		err = nil
-	}
+	// if err != nil && err == serial.ErrTimeout {
+	// 	err = nil
+	// }
 
 	return
 }
